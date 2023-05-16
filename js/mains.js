@@ -168,17 +168,18 @@ function boletin() {
 
     nombre  = prompt("Ingrese el nombre del estudiante: ");
     materia  = prompt("Ingrese la asignatura: ");
+
     alert("Ingrese las notas de 1 a 10")
 
     for (let i = 1; i <=7; i++) {
-        notas=parseFloat(prompt("Digite la nota "+i+":"));
+        notas=parseFloat(prompt("Digite la nota"+i+":"));
         suma += notas;
       }
     
     promedio= suma/7;  
 
     if (promedio >=1 && promedio <=6.1)
-    estado = "reprueba";
+    estado = "REPRUEBA";
 
     else if (promedio >6.1 && promedio<=10)
     estado = "aprueba";
@@ -226,7 +227,7 @@ function salario()
     const salario = 10000;
     const extras = 20000;
 
-    horas = parseInt(prompt("Digie las horas laboradas: "));
+    horas = parseInt(prompt("Digite las horas laboradas: "));
     
     let pago = ""
     let horas1 = 0; 
@@ -247,9 +248,10 @@ function salario()
         horas1 = 40;
     }
     else{
-        alert("Valor inválido. Ingrese ún número sin comas ni puntos")
+        alert("Valor inválido. Ingrese un número sin comas ni puntos")
     }
 
     alert("-Horas legales laboradas: "+ horas1 + "\n" + "-Horas extras: " + horasExtras + 
     "\n" + "-Salario: $"+ pago + "\n" + "-Pago extras: $" + pagoExtras + "\n" + "-Total: $" + total);
 }
+
